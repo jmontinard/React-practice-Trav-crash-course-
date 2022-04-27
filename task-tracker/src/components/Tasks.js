@@ -27,7 +27,7 @@ import Task from "./Task"
 
 // }
 
-const Tasks = ({key,tasks}) => {
+const Tasks = ({key,tasks,onDelete, onToggle}) => {
 
     
  
@@ -38,7 +38,7 @@ const Tasks = ({key,tasks}) => {
             // <h3 key={tasks.id}>{tasks.text} </h3>
         //    <Task text={task.text} key={task.id} day={task.day}  />
 
-        <Task key={task.id} task ={task} />
+        <Task key={task.id} task ={task} onDelete = {onDelete} onToggle={onToggle}/>
         ))}
 
        {/* <Task /> */}
